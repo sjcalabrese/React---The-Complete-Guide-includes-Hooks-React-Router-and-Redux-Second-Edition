@@ -31,3 +31,13 @@ function greetWithParams(userName, message) {
   console.log("Hello " + userName + " " + message);
 }
 greetWithParams("Sal", "World");
+
+function greetWithReturnValue(userName, message = "Hello!") {
+  return "Hi, I am " + userName + ", " + message;
+}
+
+let greeting = greetWithReturnValue("Sal", "Hi");
+console.log(greeting);
+//! To impove readability use variable
+const greeting1 = greetWithReturnValue("Sal");
+console.log(greeting1);
