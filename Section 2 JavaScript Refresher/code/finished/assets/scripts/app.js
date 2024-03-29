@@ -56,28 +56,49 @@ import * as util from "./util.js";
 
 //?Objects *****************************************************
 
-const user = {
-  name: "Max",
-  age: 34,
-  greet() {
-    console.log("Hello");
-  },
-};
-console.log(user);
-console.log(user.name);
-user.greet();
+// const user = {
+//   name: "Max",
+//   age: 34,
+//   greet() {
+//     console.log("Hello");
+//   },
+// };
+// console.log(user);
+// console.log(user.name);
+// user.greet();
 
-class User {
-  constructor(name, age) {
-    this.name = name;
-    this.age = age;
-  }
-  greet() {
-    console.log("Hi from class");
-  }
-}
+// class User {
+//   constructor(name, age) {
+//     this.name = name;
+//     this.age = age;
+//   }
+//   greet() {
+//     console.log("Hi from class");
+//   }
+// }
 
-//! to use a class it needs to be instantiated
-const user1 = new User("Manuel", 35);
-console.log(user1);
-user1.greet();
+// //! to use a class it needs to be instantiated
+// const user1 = new User("Manuel", 35);
+// console.log(user1);
+// user1.greet();
+
+//? Arrays*******************************************************
+
+const hobbies = ["sports", "cooking", "Reading"];
+console.log(hobbies[1]);
+
+hobbies.push("Working");
+console.log(hobbies);
+const index = hobbies.findIndex((item) => {
+  return item === "sports";
+});
+console.log(index);
+const indexShortened = hobbies.findIndex((item) => item === "sports");
+console.log(indexShortened);
+
+//! this will return a new array with the "!" mapped to it
+let editedHobbies = hobbies.map((item) => item + "!");
+console.log(editedHobbies);
+
+let editedHobbiesObjects = hobbies.map((item) => ({ text: item }));
+console.log(editedHobbiesObjects);
