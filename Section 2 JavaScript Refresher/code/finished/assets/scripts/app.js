@@ -43,8 +43,13 @@ import * as util from "./util.js";
 // console.log(greeting1);
 
 //? Arrow functions *****************************************
+let userName = "Sal";
+let message = "Hello";
+let greeting = (userName, message) => "Hello " + userName + " " + message;
+console.log(greeting);
 
-export default (userName, message) => {
-  console.log("Hello");
-  return userName + message;
+let hello = "";
+hello = () => {
+  return "Hello World";
 };
+console.log(hello);
