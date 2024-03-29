@@ -12,32 +12,39 @@ import * as util from "./util.js";
 //console.log(apiKey);
 //! To print out whwen using the javascript object way you will need to call the specific
 //! item from the object to log
-console.log(util.apikey);
-console.log(util.abc);
+// console.log(util.apikey);
+// console.log(util.abc);
 
-//!this funciton doesn't do anything until called
-function greet() {
+// //!this funciton doesn't do anything until called
+// function greet() {
+//   console.log("Hello");
+// }
+// //! this is calling the function to perform it's action.
+// greet();
+
+// /**
+//  * This function is used to greet a user with their name and a message
+//  * @param {string} userName - The name of the user to greet
+//  * @param {string} message - The message to include in the greeting
+//  */
+// function greetWithParams(userName, message) {
+//   console.log("Hello " + userName + " " + message);
+// }
+// greetWithParams("Sal", "World");
+
+// function greetWithReturnValue(userName, message = "Hello!") {
+//   return "Hi, I am " + userName + ", " + message;
+// }
+
+// let greeting = greetWithReturnValue("Sal", "Hi");
+// console.log(greeting);
+// //! To impove readability use variable
+// const greeting1 = greetWithReturnValue("Sal");
+// console.log(greeting1);
+
+//? Arrow functions *****************************************
+
+export default (userName, message) => {
   console.log("Hello");
-}
-//! this is calling the function to perform it's action.
-greet();
-
-/**
- * This function is used to greet a user with their name and a message
- * @param {string} userName - The name of the user to greet
- * @param {string} message - The message to include in the greeting
- */
-function greetWithParams(userName, message) {
-  console.log("Hello " + userName + " " + message);
-}
-greetWithParams("Sal", "World");
-
-function greetWithReturnValue(userName, message = "Hello!") {
-  return "Hi, I am " + userName + ", " + message;
-}
-
-let greeting = greetWithReturnValue("Sal", "Hi");
-console.log(greeting);
-//! To impove readability use variable
-const greeting1 = greetWithReturnValue("Sal");
-console.log(greeting1);
+  return userName + message;
+};
