@@ -43,13 +43,41 @@ import * as util from "./util.js";
 // console.log(greeting1);
 
 //? Arrow functions *****************************************
-let userName = "Sal";
-let message = "Hello";
-let greeting = (userName, message) => "Hello " + userName + " " + message;
-console.log(greeting);
+// let userName = "Sal";
+// let message = "Hello";
+// let greeting = (userName, message) => "Hello " + userName + " " + message;
+// console.log(greeting);
 
-let hello = "";
-hello = () => {
-  return "Hello World";
+// let hello = "";
+// hello = () => {
+//   return "Hello World";
+// };
+// console.log(hello);
+
+//?Objects *****************************************************
+
+const user = {
+  name: "Max",
+  age: 34,
+  greet() {
+    console.log("Hello");
+  },
 };
-console.log(hello);
+console.log(user);
+console.log(user.name);
+user.greet();
+
+class User {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+  greet() {
+    console.log("Hi from class");
+  }
+}
+
+//! to use a class it needs to be instantiated
+const user1 = new User("Manuel", 35);
+console.log(user1);
+user1.greet();
