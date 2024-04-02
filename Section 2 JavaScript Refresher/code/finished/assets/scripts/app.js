@@ -84,21 +84,78 @@ import * as util from "./util.js";
 
 //? Arrays*******************************************************
 
-const hobbies = ["sports", "cooking", "Reading"];
-console.log(hobbies[1]);
+// const hobbies = ["sports", "cooking", "Reading"];
+// console.log(hobbies[1]);
 
-hobbies.push("Working");
-console.log(hobbies);
-const index = hobbies.findIndex((item) => {
-  return item === "sports";
-});
-console.log(index);
-const indexShortened = hobbies.findIndex((item) => item === "sports");
-console.log(indexShortened);
+// hobbies.push("Working");
+// console.log(hobbies);
+// const index = hobbies.findIndex((item) => {
+//   return item === "sports";
+// });
+// console.log(index);
+// const indexShortened = hobbies.findIndex((item) => item === "sports");
+// console.log(indexShortened);
 
-//! this will return a new array with the "!" mapped to it
-let editedHobbies = hobbies.map((item) => item + "!");
-console.log(editedHobbies);
+// //! this will return a new array with the "!" mapped to it
+// let editedHobbies = hobbies.map((item) => item + "!");
+// console.log(editedHobbies);
 
-let editedHobbiesObjects = hobbies.map((item) => ({ text: item }));
-console.log(editedHobbiesObjects);
+// let editedHobbiesObjects = hobbies.map((item) => ({ text: item }));
+// console.log(editedHobbiesObjects);
+
+//? Destructuring arrays***************************************************
+
+// const userNameData = ["max", "Schwarzmuller"];
+// //! This is one way to separate the names
+// const firstName = userNameData[0];
+// const lastName = userNameData[1];
+//! this is the other way to do it
+// const [firstName, lastName] = ["max", "Schwarzmuller"];
+// console.log(firstName);
+// console.log(lastName);
+
+// //! you can either use the same name as the property name, or you can create an aliase using ":"
+// const { name: userName, age } = {
+//   name: "max",
+//   age: 35,
+// };
+
+// console.log(userName);
+// console.log(age);
+
+//? Spread Operator***************************************************
+
+// const hobbies = ["Sports", "Cooking"];
+// const user = {
+//   name: "Max",
+//   age: 53,
+// };
+
+// const newHobbies = ["Reading"];
+// //! Spread operator is 3 dots
+// const mergedHobbies = [...hobbies, ...newHobbies];
+// console.log(mergedHobbies);
+// //! Can also be used on objects
+// const extendedUser = {
+//   isAdmin: true,
+//   ...user,
+// };
+// console.log(extendedUser);
+
+//? control Stuctures**************************************************************
+
+//const password = prompt("Your Password");
+
+// if (password === "Hello") {
+//   //TODO
+//   console.log("Hello Works");
+// } else if (password === "hello") {
+//   console.log("hello works");
+// } else {
+//   console.log("Access not granted");
+// }
+
+const hobbies = ["Sports", "Cooking"];
+for (const hobby of hobbies) {
+  console.log(hobby);
+}
