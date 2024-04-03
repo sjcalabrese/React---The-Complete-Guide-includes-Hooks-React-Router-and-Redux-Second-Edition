@@ -177,7 +177,7 @@ import * as util from "./util.js";
 //   console.log("more timeouts ");
 // }, 4000);
 
-// //! Can also create functions that take in functions
+//! Can also create functions that take in functions
 // function greeter(greetFn) {
 //   greetFn();
 // }
@@ -188,10 +188,29 @@ import * as util from "./util.js";
 
 //? function inside a function*******************************************************
 
-function init() {
-  function greetings() {
-    console.log("hi");
-  }
-  greetings();
-}
-init();
+// function init() {
+//   function greetings() {
+//     console.log("hi");
+//   }
+//   greetings();
+// }
+// init();
+
+
+//? Reference vs Primitive Values
+
+/* Strings and numbers are primitives and cannot be edited however when changes
+changes are made a new string will be created */
+
+let userMessage= 'hello';
+userMessage = userMessage.concat('!!!');
+
+//! Arrays are references, so they can be edited.
+//! this is what allows you to change hobbies even though it's const
+//! You are not editing the place in memory, const just prevents a variable 
+//! from being overwritten like what happens when updating a string
+const hobbies = ["Sports", "Swimming"]
+//! trying to overwrite the variable doesn't work.
+hobbies = [];
+hobbies.push("Working")
+console.log(hobbies);
