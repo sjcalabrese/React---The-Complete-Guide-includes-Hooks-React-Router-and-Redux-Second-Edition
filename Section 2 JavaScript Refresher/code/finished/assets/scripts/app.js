@@ -162,26 +162,36 @@ import * as util from "./util.js";
 
 //? Using function as value ***********************************************
 
-function handleTimeout() {
-  console.log("Timed Out!");
+// function handleTimeout() {
+//   console.log("Timed Out!");
+// }
+
+// const handleTimeout2 = () => {
+//   console.log("Timed Out Again!");
+// };
+
+// // pass the function withough the () at the end to pass is as a value and not to execute
+// setTimeout(handleTimeout, 2000);
+// setTimeout(handleTimeout2, 3000);
+// setTimeout(() => {
+//   console.log("more timeouts ");
+// }, 4000);
+
+// //! Can also create functions that take in functions
+// function greeter(greetFn) {
+//   greetFn();
+// }
+
+// greeter(() => {
+//   console.log("hi");
+// });
+
+//? function inside a function*******************************************************
+
+function init() {
+  function greetings() {
+    console.log("hi");
+  }
+  greetings();
 }
-
-const handleTimeout2 = () => {
-  console.log("Timed Out Again!");
-};
-
-// pass the function withough the () at the end to pass is as a value and not to execute
-setTimeout(handleTimeout, 2000);
-setTimeout(handleTimeout2, 3000);
-setTimeout(() => {
-  console.log("more timeouts ");
-}, 4000);
-
-//! Can also create functions that take in functions
-function greeter(greetFn) {
-  greetFn();
-}
-
-greeter(() => {
-  console.log("hi");
-});
+init();
